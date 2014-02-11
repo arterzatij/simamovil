@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <title>SIMA | Sesion Movil</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" rel="stylesheet" type="text/css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js" type="text/javascript" ></script>
+    <style>
+        .file-upload {
+            position: relative;
+        }
+        .file-upload input {
+            position: absolute;
+            visibility: hidden;
+            top: 0;
+            left: 0;
+        }
+
+        .ui-li-has-thumb .ui-btn-inner a.ui-link-inherit {
+            padding-left: 40px
+        }
+
+        .ui-li-thumb, .ui-listview .ui-li-icon {
+            left: 11px;
+            top: 30px;
+        }
+    </style>
+    </head>
+
+    <body>
+
+        <div data-role="page" id="login">
+            <div data-role="header" data-theme="b" >
+                <h1>Iniciar sesión</h1>
+            </div>
+
+            <div data-role="content">
+                <form method="post" action="#">
+                  <div data-role="controlgroup">
+                    <input type="text" name="username" id="username" placeholder="Usuario">
+                    <input type="password" name="password" id="password" placeholder="Password">
+                  </div>
+                  <a data-role="button" href="#find" data-transition="slidedown" data-theme="b">Aceptar</a>
+                </form>
+            </div>
+        </div>
+
+        <div data-role="page" id="find" >
+            <div data-role="header" data-position="fixed" data-theme="b">
+                <h1>Reportes</h1>
+                <a href="#login" data-role="button" data-icon="delete" class="ui-btn-right">Salir</a>
+            </div><!-- /header -->
+
+            <div data-role="content">
+                <ul data-role="listview" data-filter="true">
+                  <li><a href="#view" data-transition="flip"><img src="ontime.png" /> <h1>ABA Seguros - 6066</h1><p>La cinta de sierra se esta botando constantemente.</p></a></li>
+                  <li><a href="#view" data-transition="flip"><img src="passdue.png" /> <h1>Carne Mart - 26217</h1><p>Baño fuera de servicio</p></a></li>
+                  <li><a href="#view" data-transition="flip"><img src="passdue.png" /> <h1>Carne Mart - 26232</h1><p>se requiere atender la fuga de agua en el lavavo del baño de hombres del CAC</p></a></li>
+                  <li><a href="#view" data-transition="flip"><img src="ontime.png" /> <h1>Carne Mart - 26268</h1><p>URGE ENVIEN AL TECNICO A REVISAR YA QUE SE QUEDARON SIN ENERGIA ELECTRICA EN TODA LA SUCURSAL Y NO PUEDEN LABORAR EL PERSONAL</p></a></li>
+                  <li><a href="#view" data-transition="flip"><img src="ontime.png" /> <h1>Carne Mart - 26285</h1><p>validar FT,NT FN (voltaje y amperaje) parametros electricos para determinar con evidencia la solucion.</p></a></li>
+                  <li><a href="#view" data-transition="flip"><img src="ontime.png" /> <h1>Carne Mart - 26303</h1><p>LA VITRINA DE FRESCOS(185),AMANECIO CON UNA TEMPERATURA FUERA DE RANGO(10 GRADOS)</p></a></li>
+                  <li><a href="#view" data-transition="flip"><img src="today.png" /> <h1>Carne Mart - 26326</h1><p>Se esta tirando el agua del tinaco</p></a></li>
+                  <li><a href="#view" data-transition="flip"><img src="today.png" /> <h1>GNP Seguros - 00225192</h1><p>Buen día Necessito que me ayuden llevando unamesa que esta aqui en WTC a Centro de acopio Gdl. Quedo pendiente saludos...</p></a></li>
+                  <li><a href="#view" data-transition="flip"><img src="today.png" /> <h1>Movistar - 6117</h1><p>Presupuestar la reparación e impermeabilización (parte) de losa de lamina donde se tienen filtraciones</p></a></li>
+                  <li><a href="#view" data-transition="flip"><img src="passdue.png" /> <h1>Nacional Monte de piedad - 0602077</h1><p>Reparación de anuncio unipolar</p></a></li>
+                  <li><a href="#view" data-transition="flip"><img src="ontime.png" /> <h1>Nacional Monte de Piedad - 6063</h1><p>LAS LUCES DE VITRINA DE PISO NO ENCIENDEN</p></a></li>
+                  <li><a href="#view" data-transition="flip"><img src="ontime.png" /> <h1>Nextel - 0214007</h1><p>LAS BISAGRAS DE LA PUERTA DEL CONGELADOR NECESITAN SERVICIO</p></a></li>
+                  <li><a href="#view" data-transition="flip"><img src="passdue.png" /> <h1>Nextel - 142704696</h1><p>Vitrina de piso de ventas no enfria</p></a></li>
+                  <li><a href="#view" data-transition="flip"><img src="ontime.png" /> <h1>Nextel - 142946299</h1><p>Reinstalar anuncio de bandera</p></a></li>
+                  <li><a href="#view" data-transition="flip"><img src="ontime.png" /> <h1>Profuturo - 20140207</h1><p>se requiere cotizar el suministro e instalacion de llos balastros y baterias para habilitar los gabinetes como tipo de emergencia en el area del BO. comunicarse para indicar cantidad</p></a></li>
+                </ul>
+            </div><!-- /content -->
+
+            <div data-role="footer" data-theme="b">
+                <h4>SIMA</h4>
+            </div><!-- /footer -->
+        </div><!-- /page -->
+
+        <div data-role="page" id="view" >
+            <div data-role="header" data-position="fixed" data-theme="b">
+                <a href="#find" data-role="button" data-icon="home">Inicio</a>
+                <h1>Carne Mart - 26326</h1>
+                <a href="#login" data-role="button" data-icon="delete">Salir</a>
+                <div data-role="navbar" data-theme="b">
+                  <ul>
+                    <li><a>Apertura: Hoy 6:19 PM</a></li>
+                    <li><a>Atencion: 11 Febrero 2014</a></li>
+                  </ul>
+                </div>
+            </div><!-- /header -->
+
+            <div data-role="content">
+                <p>La cinta de sierra se esta botando constantemente.</p>
+            </div><!-- /content -->
+
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar" data-theme="b">
+                  <ul>
+                    <li><a href="#find" data-icon="arrow-l" data-transition="slidefade">Regresar</a></li>
+                    <li><a href="#close" data-icon="check" data-rel="dialog">Cerrar Reporte</a></li>
+                  </ul>
+                </div>
+            </div><!-- /footer -->
+        </div><!-- /page -->
+
+        <div data-role="page" id="close" >
+          <div data-role="header" data-theme="b">
+            <h1>Cierre de reporte</h1>
+          </div>
+
+          <div data-role="content">
+            <p>Adjuntar imagen y comentario de cierre</p>
+            <label data-role="button" class="file-upload">
+                Subir OT
+                <input type="file">
+            </label>
+            <label for="info">Solucion:</label>
+            <textarea name="addinfo" id="info"></textarea>
+
+            <a data-role="button" href="#find" data-transition="slidedown" data-theme="b">Cerrar</a>
+          </div>
+
+        </div> 
+
+    </body>
+</html>
